@@ -137,9 +137,32 @@ interface Repo {
   // permissions.pull: string;
 }
 
+interface Members {
+  login: string;
+  id: string;
+  node_id: string;
+  avatar_url: string;
+  gravatar_id: string;
+  url: string;
+  html_url: string;
+  followers_url: string;
+  following_url: string;
+  gists_url: string;
+  starred_url: string;
+  subscriptions_url: string;
+  organizations_url: string;
+  repos_url: string;
+  events_url: string;
+  received_events_url: string;
+  type: string;
+  user_view_type: string;
+  site_admin: string;
+}
+
 export default function App() {
   const [org, setOrg] = useState<Org | null>(null);
   const [repos, setRepos] = useState<Repo[]>([]);
+  const [members, setMembers] = useState<Members[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -161,6 +184,17 @@ export default function App() {
       );
       const reposData = await reposRes.json();
       setRepos(reposData);
+
+      const membersRes = await fetch(
+        "https://api.github.com/orgs/30osob-studio/members",
+        {
+          headers: {
+            Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
+          },
+        }
+      );
+      const membersData = await membersRes.json();
+      setMembers(membersData);
     };
 
     fetchData();
@@ -313,6 +347,31 @@ export default function App() {
             <div>permissions.push: {repo.permissions.push}</div>
             <div>permissions.triage: {repo.permissions.triage}</div>
             <div>permissions.pull: {repo.permissions.pull}</div> */}
+          </div>
+        ))}
+      </div>
+      <div>
+        {members.map((member) => (
+          <div key={member.id}>
+            <div>login: {member.login}</div>
+            <div>id: {member.id}</div>
+            <div>node_id: {member.node_id}</div>
+            <div>avatar_url: {member.avatar_url}</div>
+            <div>gravatar_id: {member.gravatar_id}</div>
+            <div>url: {member.url}</div>
+            <div>html_url: {member.html_url}</div>
+            <div>followers_url: {member.followers_url}</div>
+            <div>following_url: {member.following_url}</div>
+            <div>gists_url: {member.gists_url}</div>
+            <div>starred_url: {member.starred_url}</div>
+            <div>subscriptions_url: {member.subscriptions_url}</div>
+            <div>organizations_url: {member.organizations_url}</div>
+            <div>repos_url: {member.repos_url}</div>
+            <div>events_url: {member.events_url}</div>
+            <div>received_events_url: {member.received_events_url}</div>
+            <div>type: {member.type}</div>
+            <div>user_view_type: {member.user_view_type}</div>
+            <div>site_admin: {member.site_admin}</div>
           </div>
         ))}
       </div>
