@@ -263,11 +263,11 @@ export default function App() {
             <strong>is_verified:</strong> {org.is_verified}
           </div>
           <div>
-            <strong>has_organization_projects:</strong>{" "}
+            <strong>has_organization_projects: </strong>
             {org.has_organization_projects}
           </div>
           <div>
-            <strong>has_repository_projects:</strong>{" "}
+            <strong>has_repository_projects: </strong>
             {org.has_repository_projects}
           </div>
           <div>
