@@ -202,48 +202,124 @@ export default function App() {
 
   return (
     <div>
+      <h1>Orgs</h1>
       {org && (
         <div>
-          <div>login: {org.login}</div>
-          <div>id: {org.id}</div>
-          <div>node_id: {org.node_id}</div>
-          <div>url: {org.url}</div>
-          <div>repos_url: {org.repos_url}</div>
-          <div>events_url: {org.events_url}</div>
-          <div>hooks_url: {org.hooks_url}</div>
-          <div>issues_url: {org.issues_url}</div>
-          <div>members_url: {org.members_url}</div>
-          <div>public_members_url: {org.public_members_url}</div>
-          <div>avatar_url: {org.avatar_url}</div>
-          <div>description: {org.description}</div>
-          <div>name: {org.name}</div>
-          <div>company: {org.company}</div>
-          <div>blog: {org.blog}</div>
-          <div>location: {org.location}</div>
-          <div>email: {org.email}</div>
-          <div>twitter_username: {org.twitter_username}</div>
-          <div>is_verified: {org.is_verified}</div>
-          <div>has_organization_projects: {org.has_organization_projects}</div>
-          <div>has_repository_projects: {org.has_repository_projects}</div>
-          <div>public_repos: {org.public_repos}</div>
-          <div>public_gists: {org.public_gists}</div>
-          <div>followers: {org.followers}</div>
-          <div>following: {org.following}</div>
-          <div>html_url: {org.html_url}</div>
-          <div>created_at: {org.created_at}</div>
-          <div>updated_at: {org.updated_at}</div>
-          <div>archived_at: {org.archived_at}</div>
-          <div>type: {org.type}</div>
+          <div>
+            <strong>login:</strong> {org.login}
+          </div>
+          <div>
+            <strong>id:</strong> {org.id}
+          </div>
+          <div>
+            <strong>node_id:</strong> {org.node_id}
+          </div>
+          <div>
+            <strong>url:</strong> {org.url}
+          </div>
+          <div>
+            <strong>repos_url:</strong> {org.repos_url}
+          </div>
+          <div>
+            <strong>events_url:</strong> {org.events_url}
+          </div>
+          <div>
+            <strong>hooks_url:</strong> {org.hooks_url}
+          </div>
+          <div>
+            <strong>issues_url:</strong> {org.issues_url}
+          </div>
+          <div>
+            <strong>members_url:</strong> {org.members_url}
+          </div>
+          <div>
+            <strong>public_members_url:</strong> {org.public_members_url}
+          </div>
+          <div>
+            <strong>avatar_url:</strong> {org.avatar_url}
+          </div>
+          <div>
+            <strong>description:</strong> {org.description}
+          </div>
+          <div>
+            <strong>name:</strong> {org.name}
+          </div>
+          <div>
+            <strong>company:</strong> {org.company}
+          </div>
+          <div>
+            <strong>blog:</strong> {org.blog}
+          </div>
+          <div>
+            <strong>location:</strong> {org.location}
+          </div>
+          <div>
+            <strong>email:</strong> {org.email}
+          </div>
+          <div>
+            <strong>twitter_username:</strong> {org.twitter_username}
+          </div>
+          <div>
+            <strong>is_verified:</strong> {org.is_verified}
+          </div>
+          <div>
+            <strong>has_organization_projects:</strong>{" "}
+            {org.has_organization_projects}
+          </div>
+          <div>
+            <strong>has_repository_projects:</strong>{" "}
+            {org.has_repository_projects}
+          </div>
+          <div>
+            <strong>public_repos:</strong> {org.public_repos}
+          </div>
+          <div>
+            <strong>public_gists:</strong> {org.public_gists}
+          </div>
+          <div>
+            <strong>followers:</strong> {org.followers}
+          </div>
+          <div>
+            <strong>following:</strong> {org.following}
+          </div>
+          <div>
+            <strong>html_url:</strong> {org.html_url}
+          </div>
+          <div>
+            <strong>created_at:</strong> {org.created_at}
+          </div>
+          <div>
+            <strong>updated_at:</strong> {org.updated_at}
+          </div>
+          <div>
+            <strong>archived_at:</strong> {org.archived_at}
+          </div>
+          <div>
+            <strong>type:</strong> {org.type}
+          </div>
+
+          <hr />
         </div>
       )}
       <div>
+        <h1>Repos</h1>
         {repos.map((repo) => (
           <div key={repo.id}>
-            <div>id: {repo.id}</div>
-            <div>node_id: {repo.node_id}</div>
-            <div>name: {repo.name}</div>
-            <div>full_name: {repo.full_name}</div>
-            <div>private: {repo.private}</div>
+            <div>
+              <strong>id:</strong> {repo.id}
+            </div>
+            <div>
+              <strong>node_id:</strong> {repo.node_id}
+            </div>
+            <div>
+              <strong>name:</strong> {repo.name}
+            </div>
+            <div>
+              <strong>full_name:</strong> {repo.full_name}
+            </div>
+            <div>
+              <strong>private:</strong> {repo.private}
+            </div>
 
             {/* <div>owner.login: {repo.owner.login}</div>
             <div>owner.id: {repo.owner.id}</div>
@@ -267,111 +343,296 @@ export default function App() {
             <div>owner.user_view_type: {repo.owner.user_view_type}</div>
             <div>owner.site_admin: {repo.owner.site_admin}</div> */}
 
-            <div>html_url: {repo.html_url}</div>
-            <div>description: {repo.description}</div>
-            <div>fork: {repo.fork}</div>
-            <div>url: {repo.url}</div>
-            <div>forks_url: {repo.forks_url}</div>
-            <div>keys_url: {repo.keys_url}</div>
-            <div>collaborators_url: {repo.collaborators_url}</div>
-            <div>teams_url: {repo.teams_url}</div>
-            <div>hooks_url: {repo.hooks_url}</div>
-            <div>issue_events_url: {repo.issue_events_url}</div>
-            <div>events_url: {repo.events_url}</div>
-            <div>assignees_url: {repo.assignees_url}</div>
-            <div>branches_url: {repo.branches_url}</div>
-            <div>tags_url: {repo.tags_url}</div>
-            <div>blobs_url: {repo.blobs_url}</div>
-            <div>git_tags_url: {repo.git_tags_url}</div>
-            <div>git_refs_url: {repo.git_refs_url}</div>
-            <div>trees_url: {repo.trees_url}</div>
-            <div>statuses_url: {repo.statuses_url}</div>
-            <div>languages_url: {repo.languages_url}</div>
-            <div>stargazers_url: {repo.stargazers_url}</div>
-            <div>contributors_url: {repo.contributors_url}</div>
-            <div>subscribers_url: {repo.subscribers_url}</div>
-            <div>subscription_url: {repo.subscription_url}</div>
-            <div>commits_url: {repo.commits_url}</div>
-            <div>git_commits_url: {repo.git_commits_url}</div>
-            <div>comments_url: {repo.comments_url}</div>
-            <div>issue_comment_url: {repo.issue_comment_url}</div>
-            <div>contents_url: {repo.contents_url}</div>
-            <div>compare_url: {repo.compare_url}</div>
-            <div>merges_url: {repo.merges_url}</div>
-            <div>archive_url: {repo.archive_url}</div>
-            <div>downloads_url: {repo.downloads_url}</div>
-            <div>issues_url: {repo.issues_url}</div>
-            <div>pulls_url: {repo.pulls_url}</div>
-            <div>milestones_url: {repo.milestones_url}</div>
-            <div>notifications_url: {repo.notifications_url}</div>
-            <div>labels_url: {repo.labels_url}</div>
-            <div>releases_url: {repo.releases_url}</div>
-            <div>deployments_url: {repo.deployments_url}</div>
-            <div>created_at: {repo.created_at}</div>
-            <div>updated_at: {repo.updated_at}</div>
-            <div>pushed_at: {repo.pushed_at}</div>
-            <div>git_url: {repo.git_url}</div>
-            <div>ssh_url: {repo.ssh_url}</div>
-            <div>clone_url: {repo.clone_url}</div>
-            <div>svn_url: {repo.svn_url}</div>
-            <div>homepage: {repo.homepage}</div>
-            <div>size: {repo.size}</div>
-            <div>stargazers_count: {repo.stargazers_count}</div>
-            <div>watchers_count: {repo.watchers_count}</div>
-            <div>language: {repo.language}</div>
-            <div>has_issues: {repo.has_issues}</div>
-            <div>has_projects: {repo.has_projects}</div>
-            <div>has_downloads: {repo.has_downloads}</div>
-            <div>has_wiki: {repo.has_wiki}</div>
-            <div>has_pages: {repo.has_pages}</div>
-            <div>has_discussions: {repo.has_discussions}</div>
-            <div>forks_count: {repo.forks_count}</div>
-            <div>mirror_url: {repo.mirror_url}</div>
-            <div>archived: {repo.archived}</div>
-            <div>disabled: {repo.disabled}</div>
-            <div>open_issues_count: {repo.open_issues_count}</div>
-            <div>license: {repo.license}</div>
-            <div>allow_forking: {repo.allow_forking}</div>
-            <div>is_template: {repo.is_template}</div>
             <div>
-              web_commit_signoff_required: {repo.web_commit_signoff_required}
+              <strong>html_url:</strong> {repo.html_url}
             </div>
-            <div>visibility: {repo.visibility}</div>
-            <div>forks: {repo.forks}</div>
-            <div>open_issues: {repo.open_issues}</div>
-            <div>watchers: {repo.watchers}</div>
-            <div>default_branch: {repo.default_branch}</div>
+            <div>
+              <strong>description:</strong> {repo.description}
+            </div>
+            <div>
+              <strong>fork:</strong> {repo.fork}
+            </div>
+            <div>
+              <strong>url:</strong> {repo.url}
+            </div>
+            <div>
+              <strong>forks_url:</strong> {repo.forks_url}
+            </div>
+            <div>
+              <strong>keys_url:</strong> {repo.keys_url}
+            </div>
+            <div>
+              <strong>collaborators_url:</strong> {repo.collaborators_url}
+            </div>
+            <div>
+              <strong>teams_url:</strong> {repo.teams_url}
+            </div>
+            <div>
+              <strong>hooks_url:</strong> {repo.hooks_url}
+            </div>
+            <div>
+              <strong>issue_events_url:</strong> {repo.issue_events_url}
+            </div>
+            <div>
+              <strong>events_url:</strong> {repo.events_url}
+            </div>
+            <div>
+              <strong>assignees_url:</strong> {repo.assignees_url}
+            </div>
+            <div>
+              <strong>branches_url:</strong> {repo.branches_url}
+            </div>
+            <div>
+              <strong>tags_url:</strong> {repo.tags_url}
+            </div>
+            <div>
+              <strong>blobs_url:</strong> {repo.blobs_url}
+            </div>
+            <div>
+              <strong>git_tags_url:</strong> {repo.git_tags_url}
+            </div>
+            <div>
+              <strong>git_refs_url:</strong> {repo.git_refs_url}
+            </div>
+            <div>
+              <strong>trees_url:</strong> {repo.trees_url}
+            </div>
+            <div>
+              <strong>statuses_url:</strong> {repo.statuses_url}
+            </div>
+            <div>
+              <strong>languages_url:</strong> {repo.languages_url}
+            </div>
+            <div>
+              <strong>stargazers_url:</strong> {repo.stargazers_url}
+            </div>
+            <div>
+              <strong>contributors_url:</strong> {repo.contributors_url}
+            </div>
+            <div>
+              <strong>subscribers_url:</strong> {repo.subscribers_url}
+            </div>
+            <div>
+              <strong>subscription_url:</strong> {repo.subscription_url}
+            </div>
+            <div>
+              <strong>commits_url:</strong> {repo.commits_url}
+            </div>
+            <div>
+              <strong>git_commits_url:</strong> {repo.git_commits_url}
+            </div>
+            <div>
+              <strong>comments_url:</strong> {repo.comments_url}
+            </div>
+            <div>
+              <strong>issue_comment_url:</strong> {repo.issue_comment_url}
+            </div>
+            <div>
+              <strong>contents_url:</strong> {repo.contents_url}
+            </div>
+            <div>
+              <strong>compare_url:</strong> {repo.compare_url}
+            </div>
+            <div>
+              <strong>merges_url:</strong> {repo.merges_url}
+            </div>
+            <div>
+              <strong>archive_url:</strong> {repo.archive_url}
+            </div>
+            <div>
+              <strong>downloads_url:</strong> {repo.downloads_url}
+            </div>
+            <div>
+              <strong>issues_url:</strong> {repo.issues_url}
+            </div>
+            <div>
+              <strong>pulls_url:</strong> {repo.pulls_url}
+            </div>
+            <div>
+              <strong>milestones_url:</strong> {repo.milestones_url}
+            </div>
+            <div>
+              <strong>notifications_url:</strong> {repo.notifications_url}
+            </div>
+            <div>
+              <strong>labels_url:</strong> {repo.labels_url}
+            </div>
+            <div>
+              <strong>releases_url:</strong> {repo.releases_url}
+            </div>
+            <div>
+              <strong>deployments_url:</strong> {repo.deployments_url}
+            </div>
+            <div>
+              <strong>created_at:</strong> {repo.created_at}
+            </div>
+            <div>
+              <strong>updated_at:</strong> {repo.updated_at}
+            </div>
+            <div>
+              <strong>pushed_at:</strong> {repo.pushed_at}
+            </div>
+            <div>
+              <strong>git_url:</strong> {repo.git_url}
+            </div>
+            <div>
+              <strong>ssh_url:</strong> {repo.ssh_url}
+            </div>
+            <div>
+              <strong>clone_url:</strong> {repo.clone_url}
+            </div>
+            <div>
+              <strong>svn_url:</strong> {repo.svn_url}
+            </div>
+            <div>
+              <strong>homepage:</strong> {repo.homepage}
+            </div>
+            <div>
+              <strong>size:</strong> {repo.size}
+            </div>
+            <div>
+              <strong>stargazers_count:</strong> {repo.stargazers_count}
+            </div>
+            <div>
+              <strong>watchers_count:</strong> {repo.watchers_count}
+            </div>
+            <div>
+              <strong>language:</strong> {repo.language}
+            </div>
+            <div>
+              <strong>has_issues:</strong> {repo.has_issues}
+            </div>
+            <div>
+              <strong>has_projects:</strong> {repo.has_projects}
+            </div>
+            <div>
+              <strong>has_downloads:</strong> {repo.has_downloads}
+            </div>
+            <div>
+              <strong>has_wiki:</strong> {repo.has_wiki}
+            </div>
+            <div>
+              <strong>has_pages:</strong> {repo.has_pages}
+            </div>
+            <div>
+              <strong>has_discussions:</strong> {repo.has_discussions}
+            </div>
+            <div>
+              <strong>forks_count:</strong> {repo.forks_count}
+            </div>
+            <div>
+              <strong>mirror_url:</strong> {repo.mirror_url}
+            </div>
+            <div>
+              <strong>archived:</strong> {repo.archived}
+            </div>
+            <div>
+              <strong>disabled:</strong> {repo.disabled}
+            </div>
+            <div>
+              <strong>open_issues_count:</strong> {repo.open_issues_count}
+            </div>
+            <div>
+              <strong>license:</strong> {repo.license}
+            </div>
+            <div>
+              <strong>allow_forking:</strong> {repo.allow_forking}
+            </div>
+            <div>
+              <strong>is_template:</strong> {repo.is_template}
+            </div>
+            <div>
+              <strong>web_commit_signoff_required:</strong>{" "}
+              {repo.web_commit_signoff_required}
+            </div>
+            <div>
+              <strong>visibility:</strong> {repo.visibility}
+            </div>
+            <div>
+              <strong>forks:</strong> {repo.forks}
+            </div>
+            <div>
+              <strong>open_issues:</strong> {repo.open_issues}
+            </div>
+            <div>
+              <strong>watchers:</strong> {repo.watchers}
+            </div>
+            <div>
+              <strong>default_branch:</strong> {repo.default_branch}
+            </div>
 
             {/* <div>permissions.admin: {repo.permissions.admin}</div>
             <div>permissions.maintain: {repo.permissions.maintain}</div>
             <div>permissions.push: {repo.permissions.push}</div>
             <div>permissions.triage: {repo.permissions.triage}</div>
             <div>permissions.pull: {repo.permissions.pull}</div> */}
+            <hr />
           </div>
         ))}
       </div>
       <div>
+        <h1>Members</h1>
         {members.map((member) => (
           <div key={member.id}>
-            <div>login: {member.login}</div>
-            <div>id: {member.id}</div>
-            <div>node_id: {member.node_id}</div>
-            <div>avatar_url: {member.avatar_url}</div>
-            <div>gravatar_id: {member.gravatar_id}</div>
-            <div>url: {member.url}</div>
-            <div>html_url: {member.html_url}</div>
-            <div>followers_url: {member.followers_url}</div>
-            <div>following_url: {member.following_url}</div>
-            <div>gists_url: {member.gists_url}</div>
-            <div>starred_url: {member.starred_url}</div>
-            <div>subscriptions_url: {member.subscriptions_url}</div>
-            <div>organizations_url: {member.organizations_url}</div>
-            <div>repos_url: {member.repos_url}</div>
-            <div>events_url: {member.events_url}</div>
-            <div>received_events_url: {member.received_events_url}</div>
-            <div>type: {member.type}</div>
-            <div>user_view_type: {member.user_view_type}</div>
-            <div>site_admin: {member.site_admin}</div>
+            <div>
+              <strong>login:</strong> {member.login}
+            </div>
+            <div>
+              <strong>id:</strong> {member.id}
+            </div>
+            <div>
+              <strong>node_id:</strong> {member.node_id}
+            </div>
+            <div>
+              <strong>avatar_url:</strong> {member.avatar_url}
+            </div>
+            <div>
+              <strong>gravatar_id:</strong> {member.gravatar_id}
+            </div>
+            <div>
+              <strong>url:</strong> {member.url}
+            </div>
+            <div>
+              <strong>html_url:</strong> {member.html_url}
+            </div>
+            <div>
+              <strong>followers_url:</strong> {member.followers_url}
+            </div>
+            <div>
+              <strong>following_url:</strong> {member.following_url}
+            </div>
+            <div>
+              <strong>gists_url:</strong> {member.gists_url}
+            </div>
+            <div>
+              <strong>starred_url:</strong> {member.starred_url}
+            </div>
+            <div>
+              <strong>subscriptions_url:</strong> {member.subscriptions_url}
+            </div>
+            <div>
+              <strong>organizations_url:</strong> {member.organizations_url}
+            </div>
+            <div>
+              <strong>repos_url:</strong> {member.repos_url}
+            </div>
+            <div>
+              <strong>events_url:</strong> {member.events_url}
+            </div>
+            <div>
+              <strong>received_events_url:</strong> {member.received_events_url}
+            </div>
+            <div>
+              <strong>type:</strong> {member.type}
+            </div>
+            <div>
+              <strong>user_view_type:</strong> {member.user_view_type}
+            </div>
+            <div>
+              <strong>site_admin:</strong> {member.site_admin}
+            </div>
+
+            <hr />
           </div>
         ))}
       </div>
